@@ -1,0 +1,22 @@
+C:\Users\Nick\AppData\Local\Temporary Projects\coopgamestest\bin\Debug\coopgamestest.exe
+C:\Users\Nick\AppData\Local\Temporary Projects\coopgamestest\bin\Debug\coopgamestest.pdb
+C:\Users\Nick\AppData\Local\Temporary Projects\coopgamestest\obj\x86\Debug\coopgamestest.InitializationForm.resources
+C:\Users\Nick\AppData\Local\Temporary Projects\coopgamestest\obj\x86\Debug\coopgamestest.Properties.Resources.resources
+C:\Users\Nick\AppData\Local\Temporary Projects\coopgamestest\obj\x86\Debug\coopgamestest.csproj.GenerateResource.Cache
+C:\Users\Nick\AppData\Local\Temporary Projects\coopgamestest\obj\x86\Debug\coopgamestest.exe
+C:\Users\Nick\AppData\Local\Temporary Projects\coopgamestest\obj\x86\Debug\coopgamestest.pdb
+C:\Users\Nick\AppData\Local\Temporary Projects\coopgamestest\obj\x86\Debug\coopgamestest.TestSelectionForm.resources
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\coopgamestest.exe
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\coopgamestest.pdb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\bin\Debug\coopgamestest.exe
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\bin\Debug\coopgamestest.pdb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\coopgamestest.csproj.GenerateResource.Cache
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\coopgamestest.csprojResolveAssemblyReference.cache
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.IncooperativeGame.resources
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\General.StudentInitializationForm.resources
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\General.Properties.Resources.resources
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\General.TestSelectionForm.resources
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.ViewSingleGameForm.resources
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.CoalitionChooseForm.resources
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.ViewCooperativeGameForm.resources
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.OptimalCoalitionForm.resources
