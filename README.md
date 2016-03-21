@@ -7,4 +7,7 @@ The test is divided in 3 parts:
 - Calculation of the Shapley value
 - C-kernel determination
 
+1. Finding economical stable coalitions
+  In current section student should show skills of calculating game outcome, strategy domination, determination of coalition economical stability and payoff division rationality.
 
+Featured example is demo version that shows functionality. Testing application for students would be added soon.
