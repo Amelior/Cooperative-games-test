@@ -124,17 +124,14 @@
   <data name="navigationPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>700, 75</value>
   </data>
-  <data name="navigationPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 373</value>
-  </data>
   <data name="&gt;&gt;headerPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;FinishButton.Name" xml:space="preserve">
     <value>FinishButton</value>
   </data>
-  <data name="&gt;&gt;headerPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;FinishButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;headerLabel.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -161,8 +158,8 @@
   <data name="&gt;&gt;FinishButton.Parent" xml:space="preserve">
     <value>navigationPanel</value>
   </data>
-  <data name="&gt;&gt;taskContentPanel.Parent" xml:space="preserve">
-    <value>headerPanel</value>
+  <data name="&gt;&gt;navigationPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>contentPanel</value>
@@ -172,9 +169,6 @@
   </data>
   <data name="&gt;&gt;contentPanel.Name" xml:space="preserve">
     <value>contentPanel</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 20</value>
@@ -239,14 +233,17 @@
   <data name="&gt;&gt;D.Parent" xml:space="preserve">
     <value>contentPanel</value>
   </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>235, 9</value>
+  </data>
   <data name="D.Location" type="System.Drawing.Point, System.Drawing">
     <value>159, 32</value>
   </data>
   <data name="&gt;&gt;label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FinishButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;taskLabel.Name" xml:space="preserve">
+    <value>taskLabel</value>
   </data>
   <data name="&gt;&gt;headerLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -262,9 +259,6 @@
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>325, 20</value>
-  </data>
-  <data name="&gt;&gt;taskLabel.Name" xml:space="preserve">
-    <value>taskLabel</value>
   </data>
   <data name="&gt;&gt;SkipButton.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -293,6 +287,9 @@
   <data name="label3.Text" xml:space="preserve">
     <value>FAQ</value>
   </data>
+  <data name="&gt;&gt;SkipButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;headerLabel.Name" xml:space="preserve">
     <value>headerLabel</value>
   </data>
@@ -308,14 +305,14 @@
   <data name="&gt;&gt;taskLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;navigationPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="navigationPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 373</value>
   </data>
   <data name="&gt;&gt;headerLabel.Parent" xml:space="preserve">
     <value>headerPanel</value>
   </data>
-  <data name="&gt;&gt;SkipButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;GenerationPanel.Name" xml:space="preserve">
     <value>GenerationPanel</value>
@@ -338,8 +335,11 @@
   <data name="&gt;&gt;taskLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>235, 9</value>
+  <data name="&gt;&gt;taskContentPanel.Parent" xml:space="preserve">
+    <value>headerPanel</value>
+  </data>
+  <data name="&gt;&gt;headerPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Players payoffs in single bimatrix games</value>
@@ -365,8 +365,8 @@
   <data name="&gt;&gt;testPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;D.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;navigationPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;testPanel.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -377,11 +377,11 @@
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;D.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;contentPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;navigationPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="GenerationPanel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>

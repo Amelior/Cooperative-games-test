@@ -71,12 +71,6 @@
     <Compile Include="Coalitions\CoalitionChooseForm.Designer.cs">
       <DependentUpon>CoalitionChooseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Coalitions\IncooperativeGame.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Coalitions\IncooperativeGame.Designer.cs">
-      <DependentUpon>IncooperativeGame.cs</DependentUpon>
-    </Compile>
     <Compile Include="Coalitions\ViewSingleGameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,9 +113,6 @@
     </Compile>
     <EmbeddedResource Include="Coalitions\CoalitionChooseForm.resx">
       <DependentUpon>CoalitionChooseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Coalitions\IncooperativeGame.resx">
-      <DependentUpon>IncooperativeGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coalitions\IncooperativeGameForm.en-US.resx">
       <DependentUpon>IncooperativeGameForm.cs</DependentUpon>

@@ -16,6 +16,11 @@ namespace General
             InitializeComponent();
         }
 
+        public double Value()
+        {
+            return Convert.ToDouble(NumericTB.Text.Replace('.', ','));
+        }
+
         private bool isNumber(char key)
         {
             switch (key)

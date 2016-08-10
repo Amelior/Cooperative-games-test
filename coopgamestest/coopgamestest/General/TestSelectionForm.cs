@@ -61,7 +61,7 @@ namespace General
 
         private void coopGamesButton_Click(object sender, EventArgs e)
         {
-            Coalitions.IncooperativeGame F = new Coalitions.IncooperativeGame();
+            Coalitions.IncooperativeGameForm F = new Coalitions.IncooperativeGameForm();
             F.StartPosition = FormStartPosition.Manual;
             F.Location = new Point((Screen.PrimaryScreen.Bounds.Width - F.Width)/2, 200);
             this.Hide();

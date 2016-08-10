@@ -193,45 +193,6 @@ namespace General.Coalitions
 
             outerblocks.Add(blocks.Last(), navigationPanel.Name);
         }
-
-        /// <summary>
-        /// Select 2 cells in matrix onclick
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void CellSelected(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
-                if ((e.ColumnIndex > -1) && (e.RowIndex > -1))
-                    D.Rows[e.ColumnIndex].Cells[e.RowIndex].Selected = true;
-        }
-
-        /// <summary>
-        /// Open single incooperative bimatrix game
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void UI_OpenGameForm(object sender, DataGridViewCellEventArgs e)
-        {
-            int i = e.RowIndex, j = e.ColumnIndex;
-            if (i != j)
-            {
-                if (i > j)
-                {
-                    i = e.ColumnIndex;
-                    j = e.RowIndex;
-                }
-
-                SingleGame G = Database.G.FindGame(sender, i, j);
-                ViewSingleGameForm F = new ViewSingleGameForm(G);
-                F.StartPosition = FormStartPosition.Manual;
-                MultiFormProcessor.FormOpened();
-                F.Location = new Point(10, 10);
-                F.Show();
-                CGStudentProgress.FormsOpened.Add(F);
-            }
-        }
-
         #endregion
 
         #endregion
@@ -311,7 +272,107 @@ namespace General.Coalitions
 
             }
         }
-        
+
         #endregion
+
+
+        #region Buttons Interaction
+
+        /// <summary>
+        /// Check textboxes and open next form if correct
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FinishButton_Click(object sender, EventArgs e)
+        {
+            if (CheckIncooperativeGame())
+                SkipButton_Click(this, new EventArgs());
+        }
+
+        /// <summary>
+        /// Finish this step and open next form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SkipButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public bool CheckIncooperativeGame()
+        {
+            //Check fulfillment
+            for (int i = 0; i < TB.Count; i++)
+            {
+                if (TB[i].NumericTB.Text == "")
+                {
+                    if (i == TB.Count - 1) System.Windows.Forms.MessageBox.Show("Заполните поле целевой функции");
+                    else System.Windows.Forms.MessageBox.Show("Поле для " + (i + 1) + " игрока не заполнено.");
+                    return false;
+                }
+            }
+
+            //If not empty
+            for (int i = 0; i < TB.Count; i++)
+            {
+                double value = TB[i].Value(),
+                     ActualValue;
+                if (i < TB.Count - 1)
+                    ActualValue = Database.G.payoffs[i];
+                else
+                    ActualValue = Database.G.outcome;
+
+                if ((value > 1.1 * ActualValue) || (value < 0.9 * ActualValue))
+                {
+                    CGStudentProgress.GenerateError("Ошибка при подсчете выражения для " + (i + 1) + " игрока.");
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        #region Grid Interaction
+        /// <summary>
+        /// Select 2 cells in matrix onclick
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void CellSelected(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+                if ((e.ColumnIndex > -1) && (e.RowIndex > -1))
+                    D.Rows[e.ColumnIndex].Cells[e.RowIndex].Selected = true;
+        }
+
+        /// <summary>
+        /// Open single incooperative bimatrix game
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void UI_OpenGameForm(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex, j = e.ColumnIndex;
+            if (i != j)
+            {
+                if (i > j)
+                {
+                    i = e.ColumnIndex;
+                    j = e.RowIndex;
+                }
+
+                SingleGame G = Database.G.FindGame(sender, i, j);
+                ViewSingleGameForm F = new ViewSingleGameForm(G);
+                F.StartPosition = FormStartPosition.Manual;
+                MultiFormProcessor.FormOpened();
+                F.Location = new Point(10, 10);
+                F.Show();
+                CGStudentProgress.FormsOpened.Add(F);
+            }
+        }
+        #endregion
+
+        #endregion
+
     }
 }

@@ -63,12 +63,14 @@
             resources.ApplyResources(this.SkipButton, "SkipButton");
             this.SkipButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SkipButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.SkipButton.Click += new System.EventHandler(this.SkipButton_Click);
             // 
             // FinishButton
             // 
             resources.ApplyResources(this.FinishButton, "FinishButton");
             this.FinishButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.FinishButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
             // 
             // headerPanel
             // 

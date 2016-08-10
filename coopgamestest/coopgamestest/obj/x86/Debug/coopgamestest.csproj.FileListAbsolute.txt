@@ -26,7 +26,6 @@ D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\bin\Debug\CoopGam
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\bin\Debug\CoopGamesTest.pdb
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\CoopGamesTest.csprojResolveAssemblyReference.cache
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.CoalitionChooseForm.resources
-D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.IncooperativeGame.resources
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.OptimalCoalitionForm.resources
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.ViewCooperativeGameForm.resources
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.ViewSingleGameForm.resources
