@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coalitions\IncooperativeGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coalitions\IncooperativeGameForm.Designer.cs">
+      <DependentUpon>IncooperativeGameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Coalitions\OptimalCoalitionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,7 +64,7 @@
     <Compile Include="Coalitions\ViewCooperativeGameForm.Designer.cs">
       <DependentUpon>ViewCooperativeGameForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameTheory.cs" />
+    <Compile Include="Logic\GameTheory.cs" />
     <Compile Include="Coalitions\CoalitionChooseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,13 +83,25 @@
     <Compile Include="Coalitions\ViewSingleGameForm.Designer.cs">
       <DependentUpon>ViewSingleGameForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database.cs" />
-    <Compile Include="Interface.cs" />
+    <Compile Include="Logic\Database.cs" />
+    <Compile Include="Logic\Interface.cs" />
     <Compile Include="General\StudentInitializationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="General\StudentInitializationForm.Designer.cs">
       <DependentUpon>StudentInitializationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\simpleMasterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterPages\simpleMasterPage.Designer.cs">
+      <DependentUpon>simpleMasterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumericTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NumericTextBox.Designer.cs">
+      <DependentUpon>NumericTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,11 +111,26 @@
     <Compile Include="General\TestSelectionForm.Designer.cs">
       <DependentUpon>TestSelectionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Shapley\ShapleyTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shapley\ShapleyTask.Designer.cs">
+      <DependentUpon>ShapleyTask.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Coalitions\CoalitionChooseForm.resx">
       <DependentUpon>CoalitionChooseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coalitions\IncooperativeGame.resx">
       <DependentUpon>IncooperativeGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coalitions\IncooperativeGameForm.en-US.resx">
+      <DependentUpon>IncooperativeGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coalitions\IncooperativeGameForm.resx">
+      <DependentUpon>IncooperativeGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coalitions\IncooperativeGameForm.ru.resx">
+      <DependentUpon>IncooperativeGameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coalitions\OptimalCoalitionForm.resx">
       <DependentUpon>OptimalCoalitionForm.cs</DependentUpon>
@@ -111,6 +144,15 @@
     <EmbeddedResource Include="General\StudentInitializationForm.resx">
       <DependentUpon>StudentInitializationForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPages\simpleMasterPage.resx">
+      <DependentUpon>simpleMasterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPages\simpleMasterPage.ru.resx">
+      <DependentUpon>simpleMasterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumericTextBox.resx">
+      <DependentUpon>NumericTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -126,6 +168,9 @@
       <DependentUpon>TestSelectionForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Shapley\ShapleyTask.resx">
+      <DependentUpon>ShapleyTask.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,6 +184,7 @@
   <ItemGroup>
     <None Include="Resources\CoalitionMatrixExampleImage.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -86,7 +86,9 @@
             // 
             // D
             // 
+            this.D.BackgroundColor = System.Drawing.Color.White;
             this.D.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.D.GridColor = System.Drawing.Color.Black;
             this.D.Location = new System.Drawing.Point(26, 44);
             this.D.Name = "D";
             this.D.Size = new System.Drawing.Size(370, 74);

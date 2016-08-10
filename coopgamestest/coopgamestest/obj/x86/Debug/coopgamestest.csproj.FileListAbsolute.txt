@@ -20,3 +20,28 @@ C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\
 C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.CoalitionChooseForm.resources
 C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.ViewCooperativeGameForm.resources
 C:\Users\Nick\Documents\Visual Studio 2010\Projects\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.OptimalCoalitionForm.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\CoopGamesTest.exe
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\CoopGamesTest.pdb
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\bin\Debug\CoopGamesTest.exe
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\bin\Debug\CoopGamesTest.pdb
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\CoopGamesTest.csprojResolveAssemblyReference.cache
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.CoalitionChooseForm.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.IncooperativeGame.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.OptimalCoalitionForm.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.ViewCooperativeGameForm.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.ViewSingleGameForm.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.StudentInitializationForm.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Properties.Resources.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.TestSelectionForm.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\CoopGamesTest.csproj.GenerateResource.Cache
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.MasterPages.simpleMasterPage.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Shapley.ShapleyTask.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.IncooperativeGameForm.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.NumericTextBox.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.IncooperativeGameForm.ru.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\bin\Debug\ru\CoopGamesTest.resources.dll
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\ru\CoopGamesTest.resources.dll
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\bin\Debug\en-US\CoopGamesTest.resources.dll
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.IncooperativeGameForm.en-US.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\en-US\CoopGamesTest.resources.dll
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.MasterPages.simpleMasterPage.ru.resources

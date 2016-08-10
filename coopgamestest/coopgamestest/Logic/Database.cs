@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
-
-
 
 
 namespace General
@@ -11,10 +11,11 @@ namespace General
     struct Database
     {
         public static CooperativeGame G = new CooperativeGame();
+        public static CultureInfo CurrentLocale = new CultureInfo("ru");
     }
 
     struct MultiFormProcessor
-    {
+    {        
         private static int Forms = 1;
         public static void FormClosed()
         {

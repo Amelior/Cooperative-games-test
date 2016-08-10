@@ -32,7 +32,7 @@ namespace General.Coalitions
             GenerateCoalitionPanel(Coalitions[0], true);
             for (int i = 1; i < Coalitions.Count; i++)
                 GenerateCoalitionPanel(Coalitions[i], false);
-            pp.Align(false, true);
+            pp.Align(true);
 
             UI.ControlsAligner form = new UI.ControlsAligner(this);
             form.AddElement(PanelsPanel);
@@ -111,7 +111,7 @@ namespace General.Coalitions
 
             UI.ControlsAligner spanel = new UI.ControlsAligner(PanelsPanel);
             spanel.AddElement(PanelsPanel.Controls[0]);
-            spanel.Align(false,true);
+            spanel.Align(true);
 
             UI.ControlsAligner dpanel = new UI.ControlsAligner(DivisionPanel);
             dpanel.AddElement(PayoffDivisionLabel);

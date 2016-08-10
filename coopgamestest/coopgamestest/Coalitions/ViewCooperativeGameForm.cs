@@ -123,11 +123,11 @@ namespace General.Coalitions
 
             UI.ControlsAligner spanel = new UI.ControlsAligner(StrategiesPanel);
             spanel.AddElement(S);
-            spanel.Align(false,true);
+            spanel.Align(true);
 
             UI.ControlsAligner mpanel = new UI.ControlsAligner(MatrixesPanel);
             mpanel.AddElement(A);
-            mpanel.Align(false,true);
+            mpanel.Align(true);
 
             form.Align();
             CreateNavigationPanel();
@@ -342,7 +342,8 @@ namespace General.Coalitions
                 else
                     npanel.AddElement(NavigationPanel.Controls[NavigationPanel.Controls.Count - 1], false, "Stretch");
             }
-            npanel.Align(true, true);
+            npanel.WidthFixed = true;
+            npanel.Align(true);
         }
 
         private void CreateArrays(int pl1, int pl2)

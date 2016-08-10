@@ -81,6 +81,7 @@ namespace General.Coalitions
         private void ViewSingleGameForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             CGStudentProgress.FormsOpened.Remove(this);
+            MultiFormProcessor.FormClosed();
         }
     }
 }

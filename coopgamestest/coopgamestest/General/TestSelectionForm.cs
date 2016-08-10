@@ -18,15 +18,15 @@ namespace General
             GenerateResultPanels();
 
             UI.ControlsAligner p = new UI.ControlsAligner(panel1);
-            p.AddElement(coop_games_button);
+            p.AddElement(coopGamesButton);
             if (CGStudentProgress.Finished)
                 p.AddElement(CGResult, false,"HorBind");
 
-            p.AddElement(C_kernel_button, true, "Stretch");
+            p.AddElement(CKernelButton, true, "Stretch");
             if (CKResult.Visible)
                 p.AddElement(CKResult, false, "HorBind");
 
-            p.AddElement(shapley_button, true, "Stretch");
+            p.AddElement(shapleyButton, true, "Stretch");
             if (ShapleyResult.Visible)
                 p.AddElement(ShapleyResult, false, "HorBind");
 
@@ -47,8 +47,8 @@ namespace General
         {
             if ((CGStudentProgress.Finished)&&(!CGResult.Visible))
             {
-                coop_games_button.Enabled = false;
-                coop_games_button.BackColor = Color.Transparent;
+                coopGamesButton.Enabled = false;
+                coopGamesButton.BackColor = Color.Transparent;
                 CGResult.Visible = true;
                 CGResult.Controls[0].Text += CGStudentProgress.ErrorsNumber;
             }
@@ -59,13 +59,23 @@ namespace General
             MultiFormProcessor.FormClosed();
         }
 
-        private void coop_games_button_Click(object sender, EventArgs e)
+        private void coopGamesButton_Click(object sender, EventArgs e)
         {
             Coalitions.IncooperativeGame F = new Coalitions.IncooperativeGame();
             F.StartPosition = FormStartPosition.Manual;
             F.Location = new Point((Screen.PrimaryScreen.Bounds.Width - F.Width)/2, 200);
             this.Hide();
             F.ShowDialog();
+        }
+
+        private void shapleyButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CKernelButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,24 +8,29 @@ using System.IO;
 
 namespace UI
 {
+    /// <summary>
+    /// class that aligns all the content of the container within its borders with flexible adjustment
+    /// </summary>
     public class ControlsAligner
     {
-        private Control container;
-        private List<List<Control>> controls;
+        public Control container;
+        public List<List<Control>> controls;
         private List<List<string>> position;
 
-        private Size FormBorderSize = new Size(18, 39);
+        private Size FormBorderSize = new Size(18, 39 + 26); //26 = status bar height
 
-        public int Left = 20;
-        public int Right = 20;
-        public int Top = 20;
-        public int Bottom = 20;
+        public int Left = 15;
+        public int Right = 15;
+        public int Top = 15;
+        public int Bottom = 15;
 
         public int HorizontalInterval = 30;
         public int VerticalInterval = 15;
 
         private int MaximumRowWidth = 0,
             ExtraSpace = 0;
+
+        public bool WidthFixed = false;
 
         public ControlsAligner(Control container)
         {
@@ -43,7 +48,7 @@ namespace UI
         /// <param name="NewLevel">Indicates that the current control is on the different height level</param>
         /// <param name="accociate">Previously added control with which current is binded</param>
         public void AddElement(Control c, bool NewLevel = true, string AlignmentMode = "Middle")
-        {
+        {            
             if (NewLevel)
             {
                 controls.Add(new List<Control>());
@@ -53,25 +58,28 @@ namespace UI
             position.Last().Add(AlignmentMode);
         }
 
-        public void Align(bool WidthFixed = false, bool ZeroPadding = false)
+        public void Align(bool ZeroPadding = false)
         {
-            if (ZeroPadding)
+            if (controls.Count > 0)
             {
-                Left = 0;
-                Right = 0;
-                Top = 0;
-                Bottom = 0;
+                if (ZeroPadding)
+                {
+                    Left = 0;
+                    Right = 0;
+                    Top = 0;
+                    Bottom = 0;
+                }
+                MaximumRowWidth = PlaceElements(WidthFixed);
+                AlignRows();
+
+                int MaxHeight = 0;
+                for (int j = 0; j < controls.Last().Count; j++)
+                    MaxHeight = Math.Max(MaxHeight, controls.Last()[j].Bottom);
+
+                container.Height = MaxHeight + Bottom;
+                if (container is Form)
+                    container.Height += FormBorderSize.Height;
             }
-            MaximumRowWidth = PlaceElements(WidthFixed);
-            AlignRows();
-
-            int MaxHeight = 0;
-            for (int j = 0; j < controls.Last().Count; j++)
-                MaxHeight = Math.Max(MaxHeight, controls.Last()[j].Bottom);
-
-            container.Height = MaxHeight + Bottom;
-            if (container is Form)
-                container.Height += FormBorderSize.Height;
         }
 
 
@@ -149,6 +157,7 @@ namespace UI
                 if (position[i].Last() == "Right")
                     controls[i].Last().Left = MaximumRowWidth - controls[i].Last().Width;
             }
+
             if ((controls.Last().Count > 1) && (position.Last().Last() == "Right")) // Last one is button
             {
                 Control b = controls.Last().Last(),
@@ -233,130 +242,142 @@ namespace UI
         }
     }
 
-    static class InterfaceFunctions
-    {        
-        public static void AlignElements(List<List<Control>> controls, Control container)
-        {            
-            int MaxWidth = 0;
-            for (int i = 0; i < controls.Count; i++)
+    public static class LabelsParser
+    {
+        private static string input, result;
+        private static Font f;
+
+        public static void Parse(Label l, int size)
+        {
+            input = l.Text;
+            result = input;
+            f = l.Font;
+            while (FindFirstSymbol('\n'))
+                RemoveSymbol('\n');
+
+            while (FindFirstSymbol('\r'))
+                RemoveSymbol('\r');
+            input = result;
+            result = "";
+            for (int i = 0; i<input.Length; i++)
             {
-                for (int j = 0; j < controls[i].Count; j++)
-                {
-                    if (i == 0)
-                        controls[i][j].Top = padding.Y;
-                    else
-                        controls[i][j].Top = controls[i - 1][0].Bottom + intervals.Y;
-
-                    if (j == 0)
-                        controls[i][j].Left = padding.X;
-                    else
-                        controls[i][j].Left = controls[i][j - 1].Right + intervals.X;
-
-                    if (controls[i][j].Tag == null)
-                        controls[i][j].Tag = "Middle";                   
-
-                    if (controls[i][j].Tag.ToString() != "Stretch")
-                        MaxWidth = Math.Max(MaxWidth, controls[i][j].Right);
-                }
+                if (TextRenderer.MeasureText(result + input[i], f).Width > size)
+                    result = result.Substring(0, FindLastSymbol(i - 1, ' ')) + ' ' + Environment.NewLine + result.Split(' ').Last();
+                result += input[i];
             }
-            if (WidthFixed)
-                MaxWidth = container.Width;
-            else
-                container.Width = MaxWidth + padding.X;
-            if (container is Form)
-                container.Width += 18;
+            l.Text = result;
+            l.Left = (size - l.Width) / 2;
+        }
 
-            for (int i = 0; i<controls.Count; i++)
+        private static int FindLastSymbol(int pos, char symb)
+        {
+            for (int i = pos; i >= 0; i--)
+                if (result[i] == symb)
+                    return i;
+            return -1;
+        }
+
+        private static bool FindFirstSymbol(char symb)
+        {
+            for (int i = 0; i < result.Length; i++)
+                if (result[i] == symb)
+                    return true;
+            return false;
+        }
+
+        private static void RemoveSymbol(char symb)
+        {
+            for (int i = 0; i < result.Length; i++)
+                if (result[i] == symb)
+                    result = result.Split(symb)[0] + result.Split(symb)[1];
+        }
+    }
+
+    /// <summary>
+    /// Controls Aligner array
+    /// Note: all blocks have to be at the same level (no inner blocks)
+    /// </summary>
+    public class PageContentBlocks
+    {
+        int widthAdjustment = 0;
+
+        public List<ControlsAligner> blocks = new List<ControlsAligner>();
+        
+        public void Add(ControlsAligner block, string nextItem = "")
+        {
+            if (nextItem == "")
+                blocks.Add(block);
+            else
             {
-                int diff = MaxWidth - controls[i].Last().Right;
-                bool StretchRequired = false,
-                    AlignRequired = false;
-                for (int j = 0; j < controls[i].Count; j++)
+                for (int i = 0; i<blocks.Count; i++)
                 {
-                    if (controls[i][j].Tag.ToString() == "Stretch")
-                        StretchRequired = true;
-                    else if (controls[i][j].Tag.ToString() == "Middle")
-                        AlignRequired = true;
-                }
-                if (diff != 0)
-                {
-                    if ((StretchRequired)||(AlignRequired))
+                    if (blocks[i].container.Name == nextItem)
                     {
-                        int ExtraSpace = container.Width - padding.X * 2,
-                            Count = 0;
-                        if (container is Form)
-                            ExtraSpace -= 18;
-                        string keystring;
-                        if (StretchRequired)
-                            keystring = "Stretch";
-                        else
-                            keystring = "Middle";
-                        for (int j = 0; j < controls[i].Count; j++)
-                        {
-                            if (controls[i][j].Tag.ToString() == keystring)
-                                Count++;
-                            ExtraSpace -= controls[i][j].Width;
-                        }
-                        if (StretchRequired)
-                        {
-                            for (int j = 0; j < controls[i].Count; j++)
-                                if (controls[i][j].Tag.ToString() == "Stretch")
-                                    controls[i][j].Width += ExtraSpace / Count;
-                        }
-                        else
-                        {
-                            int x0 = padding.X, x1 = container.Width - padding.X;
-                            if (container is Form)
-                                x1 -= 18;
-                            if (controls[i][0].Tag.ToString() == "Left")
-                                x0 = controls[i][0].Right;
-                            if (controls[i].Last().Tag.ToString() == "Right")
-                                x1 -= controls[i].Last().Width;
-                            for (int j = 0; j < controls[i].Count; j++)
-                                if (controls[i][j].Tag.ToString() == "Middle")
-                                {
-                                    if (j == 0)
-                                        controls[i][j].Left = x0 + ExtraSpace / (Count + 1);
-                                    else
-                                        controls[i][j].Left = controls[i][j-1].Right + ExtraSpace / (Count + 1);
-                                }
-                        }
+                        blocks.Insert(i, block);
+                        break;
                     }
                 }
             }
-
-            //Right
-            for (int i = 0; i < controls.Count; i++)
-            {
-                if (controls[i].Last().Tag.ToString() == "Right")
-                    controls[i].Last().Left = container.Width - 18 - controls[i].Last().Width - padding.X;
-            }
-            if ((controls.Last().Count > 1) && (controls.Last().Last().Tag.ToString() == "Right"))
-                controls.Last().Last().Top = controls.Last()[controls.Last().Count - 2].Bottom - controls.Last().Last().Height;
-
-            int MaxHeight = 0;
-            for (int j = 0; j < controls.Last().Count; j++)
-                MaxHeight = Math.Max(MaxHeight, controls.Last()[j].Bottom);
-
-            container.Height = MaxHeight +padding.Y;
-            if (container is Form)
-                container.Height += 39;
         }
 
-        public static void AlignElements(List<List<Control>> controls, Control container, Point Padding, Point Intervals)
+        public int MaxWidth()
         {
-            padding = Padding;
-            intervals = Intervals;
-            AlignElements(controls, container);
-            padding = new Point(20, 20);
-            intervals = new Point(30, 15);
+            int maxWidthFixed = 0,
+                maxWidth = 0;
+            foreach (ControlsAligner block in blocks)
+            {
+                maxWidth = Math.Max(maxWidth, block.container.Width + block.Left + block.Right + widthAdjustment);
+                if (block.WidthFixed)
+                    maxWidthFixed = Math.Max(maxWidthFixed, block.container.Width + block.Left + block.Right);
+            }
+            //return (maxWidthFixed == 0 ? maxWidth : maxWidthFixed);
+            return maxWidth;
         }
 
-        private static Point padding = new Point(20, 20);
-        private static Point intervals = new Point(30, 15);
-        public static bool WidthFixed = false;
-    }
+        public void Align()
+        {
+            int formContentWidth = MaxWidth();
+            foreach (ControlsAligner block in blocks)
+            {
+                block.container.Width = formContentWidth;
+                if (block.WidthFixed)
+                    block.Align();
+                else
+                {
+                    block.WidthFixed = true;
+                    block.Align();
+                    block.WidthFixed = false;
+                }
+            }
+        }
 
+        public bool Hide(String elementName)
+        {
+            foreach (ControlsAligner block in blocks)
+                if (block.container.Name == elementName)
+                {
+                    block.container.Hide();
+                    blocks.Remove(block);
+                    return true;
+                }
+                else
+                {
+                    for (int i = 0; i < block.controls.Count; i++)
+                        for (int j = 0; j < block.controls[i].Count; j++)
+                            if (block.controls[i][j].Name == elementName)
+                            {
+                                block.controls[i][j].Hide();
+                                block.controls[i].Remove(block.controls[i][j]);
+                                if (block.controls[i].Count == 0)
+                                    block.controls.RemoveAt(i);
+                                return true;
+                            }
+                }
+            return false;
+        }
+    }
+    
+    #region Grids
     class Grid
     {        
         protected DataGridView D;
@@ -946,4 +967,5 @@ namespace UI
     //        }
     //    }
     //}
+    #endregion
 }

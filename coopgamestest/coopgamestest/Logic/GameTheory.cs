@@ -657,7 +657,7 @@ namespace General
         }
         public void Generate(System.ComponentModel.BackgroundWorker W, int ProgressBarLength)
         {
-            int Step = ProgressBarLength / (N * (N - 1) / 2);
+            int Step = ProgressBarLength / (N * (N - 1) / 2 - 0);
             GenerateStrategiesNumbers();
             for (int i = 0; i < N; i++)
             {
@@ -666,6 +666,7 @@ namespace General
                     {
                         GenerateSingleGame(i, j);
                         W.ReportProgress(Step);
+                        Thread.Sleep(500);
                     }
             }
         }
@@ -822,7 +823,6 @@ namespace General
                 for (int i = 0; i < N; i++)
                     outcome += payoffs[i];
 
-                Thread.Sleep(1000);
                 if (SolveCooperativeGame(W, P.Maximum / 2))
                     unstable = false;
                 else
@@ -916,7 +916,10 @@ namespace General
             {
                 FormCoalitionBimatrixGame(Coalitions[i]);
                 if (BimatrixGames.Last().SolveBimatrixGame())
-                    W.ReportProgress(ProgressBarLength / Coalitions.Count);                   
+                {
+                    W.ReportProgress(ProgressBarLength / Coalitions.Count);
+                    Thread.Sleep(500);
+                }
                 else
                     return false;
             }

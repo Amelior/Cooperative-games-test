@@ -16,7 +16,9 @@ namespace General
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            TestSelectionForm F = new TestSelectionForm();
+            //TestSelectionForm F = new TestSelectionForm();
+            Coalitions.IncooperativeGameForm F = new Coalitions.IncooperativeGameForm();
+            //Shapley.ShapleyTask F = new Shapley.ShapleyTask();
             //StudentInitializationForm F = new StudentInitializationForm();
             //Coalitions.IncooperativeGame F = new Coalitions.IncooperativeGame();
             //Coalitions.ViewCooperativeGameForm F = new Coalitions.ViewCooperativeGameForm();
