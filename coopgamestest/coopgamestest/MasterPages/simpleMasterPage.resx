@@ -147,7 +147,80 @@
     <value>headerPanel</value>
   </data>
   <data name="&gt;&gt;headerLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="errorCounter.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="errorCounter.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bookman Old Style, 14.25pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="errorCounter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="errorCounter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 11</value>
+  </data>
+  <data name="errorCounter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 21</value>
+  </data>
+  <data name="errorCounter.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="errorCounter.Text" xml:space="preserve">
+    <value>Количество ошибок: 0</value>
+  </data>
+  <data name="&gt;&gt;errorCounter.Name" xml:space="preserve">
+    <value>errorCounter</value>
+  </data>
+  <data name="&gt;&gt;errorCounter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorCounter.Parent" xml:space="preserve">
+    <value>errorCounterPanel</value>
+  </data>
+  <data name="&gt;&gt;errorCounter.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="errorCounterPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 16</value>
+  </data>
+  <data name="errorCounterPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 45</value>
+  </data>
+  <data name="errorCounterPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;errorCounterPanel.Name" xml:space="preserve">
+    <value>errorCounterPanel</value>
+  </data>
+  <data name="&gt;&gt;errorCounterPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorCounterPanel.Parent" xml:space="preserve">
+    <value>headerPanel</value>
+  </data>
+  <data name="&gt;&gt;errorCounterPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="taskLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="taskLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="taskLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 20</value>
+  </data>
+  <data name="taskLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="taskLabel.Text" xml:space="preserve">
+    <value>Task Text Example</value>
+  </data>
+  <data name="taskLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;taskLabel.Name" xml:space="preserve">
     <value>taskLabel</value>
@@ -180,7 +253,7 @@
     <value>headerPanel</value>
   </data>
   <data name="&gt;&gt;taskContentPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="headerPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
@@ -203,41 +276,11 @@
   <data name="&gt;&gt;headerPanel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="taskLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="taskLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 13</value>
-  </data>
-  <data name="taskLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 20</value>
-  </data>
-  <data name="taskLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="taskLabel.Text" xml:space="preserve">
-    <value>Task Text Example</value>
-  </data>
-  <data name="taskLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;taskLabel.Name" xml:space="preserve">
-    <value>taskLabel</value>
-  </data>
-  <data name="&gt;&gt;taskLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;taskLabel.Parent" xml:space="preserve">
-    <value>taskContentPanel</value>
-  </data>
-  <data name="&gt;&gt;taskLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="contentPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 248</value>
+    <value>12, 214</value>
   </data>
   <data name="contentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 148</value>
+    <value>700, 182</value>
   </data>
   <data name="contentPanel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -254,6 +297,24 @@
   <data name="&gt;&gt;contentPanel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="FinishButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="FinishButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Book Antiqua, 15.75pt</value>
+  </data>
+  <data name="FinishButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>564, 12</value>
+  </data>
+  <data name="FinishButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 45</value>
+  </data>
+  <data name="FinishButton.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="FinishButton.Text" xml:space="preserve">
+    <value>Далее</value>
+  </data>
   <data name="&gt;&gt;FinishButton.Name" xml:space="preserve">
     <value>FinishButton</value>
   </data>
@@ -265,6 +326,24 @@
   </data>
   <data name="&gt;&gt;FinishButton.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="SkipButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="SkipButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Book Antiqua, 15.75pt</value>
+  </data>
+  <data name="SkipButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 12</value>
+  </data>
+  <data name="SkipButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 45</value>
+  </data>
+  <data name="SkipButton.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="SkipButton.Text" xml:space="preserve">
+    <value>Пропустить</value>
   </data>
   <data name="&gt;&gt;SkipButton.Name" xml:space="preserve">
     <value>SkipButton</value>
@@ -299,78 +378,47 @@
   <data name="&gt;&gt;navigationPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="FinishButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
-  </data>
-  <data name="FinishButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Book Antiqua, 15.75pt</value>
-  </data>
-  <data name="FinishButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>534, 12</value>
-  </data>
-  <data name="FinishButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 37</value>
-  </data>
-  <data name="FinishButton.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="FinishButton.Text" xml:space="preserve">
-    <value>Далее</value>
-  </data>
-  <data name="&gt;&gt;FinishButton.Name" xml:space="preserve">
-    <value>FinishButton</value>
-  </data>
-  <data name="&gt;&gt;FinishButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FinishButton.Parent" xml:space="preserve">
-    <value>navigationPanel</value>
-  </data>
-  <data name="&gt;&gt;FinishButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="SkipButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
-  </data>
-  <data name="SkipButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Book Antiqua, 15.75pt</value>
-  </data>
-  <data name="SkipButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 12</value>
-  </data>
-  <data name="SkipButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 37</value>
-  </data>
-  <data name="SkipButton.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="SkipButton.Text" xml:space="preserve">
-    <value>Пропустить</value>
-  </data>
-  <data name="&gt;&gt;SkipButton.Name" xml:space="preserve">
-    <value>SkipButton</value>
-  </data>
-  <data name="&gt;&gt;SkipButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SkipButton.Parent" xml:space="preserve">
-    <value>navigationPanel</value>
-  </data>
-  <data name="&gt;&gt;SkipButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <data name="statusStrip1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Bookman Old Style, 12pt</value>
   </data>
+  <data name="languageLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bookman Old Style, 14.25pt, style=Bold</value>
+  </data>
+  <data name="languageLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 22</value>
+  </data>
+  <data name="languageLabel.Text" xml:space="preserve">
+    <value>Language:</value>
+  </data>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 24</value>
+  </data>
+  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="русскийToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 24</value>
+  </data>
+  <data name="русскийToolStripMenuItem.Text" xml:space="preserve">
+    <value>Russian</value>
+  </data>
+  <data name="languageComboBox.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="languageComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 25</value>
+  </data>
+  <data name="languageComboBox.Text" xml:space="preserve">
+    <value>Russian</value>
+  </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 475</value>
+    <value>0, 474</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 26</value>
+    <value>724, 27</value>
   </data>
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -389,33 +437,6 @@
   </data>
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="languageLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 21</value>
-  </data>
-  <data name="languageLabel.Text" xml:space="preserve">
-    <value>Language:</value>
-  </data>
-  <data name="languageComboBox.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="languageComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
-  </data>
-  <data name="languageComboBox.Text" xml:space="preserve">
-    <value>Russian</value>
-  </data>
-  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 24</value>
-  </data>
-  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="русскийToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 24</value>
-  </data>
-  <data name="русскийToolStripMenuItem.Text" xml:space="preserve">
-    <value>Russian</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

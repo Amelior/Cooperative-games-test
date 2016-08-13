@@ -241,7 +241,7 @@ namespace General.Coalitions
                 if (((CB[i].Checked) && ((CB[i].Tag as BimatrixGame).outcome != max)) ||
                     ((!CB[i].Checked) && ((CB[i].Tag as BimatrixGame).outcome == max)))
                 {
-                    CGStudentProgress.GenerateError("Ошибка при определении экономической устойчивости коалиции");
+                    CGStudentProgress.GenerateError("Ошибка при определении экономической устойчивости коалиции",null);
                     return false;
                 }                
             }
@@ -297,7 +297,7 @@ namespace General.Coalitions
 
                 if ((value > 1.1 * ActualValue) || (value < 0.9 * ActualValue))
                 {
-                    CGStudentProgress.GenerateError("Ошибка при подсчете выражения для " + (i + 1) + " игрока.");
+                    CGStudentProgress.GenerateError("Ошибка при подсчете выражения для " + (i + 1) + " игрока.",null);
                     return false;
                 }
                 if (ActualValue < Database.G.payoffs[i])
@@ -307,7 +307,7 @@ namespace General.Coalitions
 
             if (((DivisionRational) && (!Rational)) || ((!DivisionRational) && (Rational)))
             {
-                CGStudentProgress.GenerateError("Ошибка при определении рациональности дележа");
+                CGStudentProgress.GenerateError("Ошибка при определении рациональности дележа",null);
                 return false;
             }
 
@@ -326,7 +326,7 @@ namespace General.Coalitions
 
                 if ((value > 1.1 * ActualValue) || (value < 0.9 * ActualValue))
                 {
-                    CGStudentProgress.GenerateError("Ошибка при подсчете выражения для " + (i + 1) + " игрока.");
+                    CGStudentProgress.GenerateError("Ошибка при подсчете выражения для " + (i + 1) + " игрока.", null);
                     return false;
                 }
             }

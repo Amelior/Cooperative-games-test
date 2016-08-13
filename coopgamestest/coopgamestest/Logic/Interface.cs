@@ -44,7 +44,7 @@ namespace UI
         /// Add new control element that requires alignment
         /// </summary>
         /// <param name="c">Current element</param>
-        /// <param name="AlignmentMode">"Left", "Middle", "Right", "Stretch" or "HorBind"</param>
+        /// <param name="AlignmentMode">"Left"/"Right", "Middle"/"Stretch" or "HorBind"/"VertBind"</param>
         /// <param name="NewLevel">Indicates that the current control is on the different height level</param>
         /// <param name="accociate">Previously added control with which current is binded</param>
         public void AddElement(Control c, bool NewLevel = true, string AlignmentMode = "Middle")
@@ -596,7 +596,7 @@ namespace UI
                 D.Rows[i].Height = cellsize.Height;
 
             //Grid
-            int Height = D.TopLeftHeaderCell.Size.Height + 5, Width = 2 + D.TopLeftHeaderCell.Size.Width;
+            int Height = D.TopLeftHeaderCell.Size.Height + 2, Width = 2 + D.TopLeftHeaderCell.Size.Width;
             for (int i = 0; i < D.Rows.Count; i++)
                 Height += D.Rows[i].Height;
             for (int i = 0; i < D.Columns.Count; i++)

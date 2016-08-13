@@ -16,7 +16,7 @@ namespace General
 
     struct MultiFormProcessor
     {        
-        private static int Forms = 1;
+        private static int Forms = 0;
         public static void FormClosed()
         {
             Forms--;
@@ -54,10 +54,11 @@ namespace General
             CurrentSection++;
         }
 
-        public static void GenerateError(string ErrorText)
+        public static void GenerateError(string ErrorText, Label T)
         {
             //Errors[1][Errors.Count - 1] = CGStudentProgress.Errors.Last() + 1;
             ErrorsNumber++;
+            T.Text = T.Text.Split(':')[0] + Convert.ToDouble(T.Text.Split(':')[1] + 1).ToString();
             System.Windows.Forms.MessageBox.Show(ErrorText + "\nКоличество ошибок: " + ErrorsNumber,
                 Sections[Errors.Count - 1]);
         }

@@ -47,7 +47,6 @@
             // navigationPanel
             // 
             resources.ApplyResources(this.navigationPanel, "navigationPanel");
-            this.navigationPanel.BackColor = System.Drawing.Color.Transparent;
             // 
             // headerLabel
             // 
@@ -56,7 +55,6 @@
             // taskLabel
             // 
             resources.ApplyResources(this.taskLabel, "taskLabel");
-            this.taskLabel.ForeColor = System.Drawing.Color.White;
             // 
             // SkipButton
             // 
@@ -75,12 +73,10 @@
             // headerPanel
             // 
             resources.ApplyResources(this.headerPanel, "headerPanel");
-            this.headerPanel.BackColor = System.Drawing.Color.DimGray;
             // 
             // contentPanel
             // 
             resources.ApplyResources(this.contentPanel, "contentPanel");
-            this.contentPanel.BackColor = System.Drawing.Color.DimGray;
             this.contentPanel.Controls.Add(this.label3);
             this.contentPanel.Controls.Add(this.D);
             this.contentPanel.Controls.Add(this.label2);
@@ -88,7 +84,11 @@
             // taskContentPanel
             // 
             resources.ApplyResources(this.taskContentPanel, "taskContentPanel");
-            this.taskContentPanel.BackColor = System.Drawing.Color.Maroon;
+            // 
+            // errorCounter
+            // 
+            resources.ApplyResources(this.errorCounter, "errorCounter");
+            this.errorCounter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(179)))), ((int)(((byte)(120)))));
             // 
             // GenerationPanel
             // 
@@ -120,13 +120,12 @@
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Name = "label2";
             // 
             // testPanel
             // 
             resources.ApplyResources(this.testPanel, "testPanel");
-            this.testPanel.BackColor = System.Drawing.Color.DimGray;
+            this.testPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(157)))), ((int)(((byte)(188)))));
             this.testPanel.Name = "testPanel";
             // 
             // label3

@@ -25,7 +25,6 @@ D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\Coo
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\bin\Debug\CoopGamesTest.exe
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\bin\Debug\CoopGamesTest.pdb
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\CoopGamesTest.csprojResolveAssemblyReference.cache
-D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.CoalitionChooseForm.resources
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.OptimalCoalitionForm.resources
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.ViewCooperativeGameForm.resources
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.ViewSingleGameForm.resources
@@ -44,3 +43,7 @@ D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\bin\Debug\en-US\C
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.IncooperativeGameForm.en-US.resources
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\en-US\CoopGamesTest.resources.dll
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.MasterPages.simpleMasterPage.ru.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.TestForm.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.TestForm.ru.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.CooperativeGameForm.resources
+D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.MasterPages.tabsMasterPage.resources

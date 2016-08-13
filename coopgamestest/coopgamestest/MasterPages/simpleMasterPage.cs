@@ -21,7 +21,8 @@ namespace General.MasterPages
         {
             InitializeComponent();
             Thread.CurrentThread.CurrentCulture = Database.CurrentLocale;
-            Thread.CurrentThread.CurrentUICulture = Database.CurrentLocale;            
+            Thread.CurrentThread.CurrentUICulture = Database.CurrentLocale;
+            MultiFormProcessor.FormOpened();
         }
 
         /// <summary>
@@ -50,13 +51,21 @@ namespace General.MasterPages
         /// <summary>
         /// Set panels content for alignment
         /// </summary>
-        protected virtual ControlsAligner AddHeader()
+        protected virtual ControlsAligner AddHeader(bool withTaskPanel = false)
         {
-            //AddTaskContent();
+            //Error panel
+            AddErrorPanel();
+
+            if (withTaskPanel)
+                AddTaskContent();
+
 
             //Header panel
             blocks.Add(new ControlsAligner(headerPanel));
             blocks.Last().AddElement(headerLabel, true, "Left");
+            blocks.Last().AddElement(errorCounterPanel, false, "Right");
+            if (withTaskPanel)
+                blocks.Last().AddElement(taskContentPanel);
             return (blocks.Last());
         }        
 
@@ -89,6 +98,13 @@ namespace General.MasterPages
             blocks.Last().AddElement(FinishButton, false, "Right");
             return (blocks.Last());
         }
+
+        protected void AddErrorPanel()
+        {
+            blocks.Add(new ControlsAligner(errorCounterPanel));
+            blocks.Last().AddElement(errorCounter);
+        }
+
 
         //Check if this form is the last opened form -> then exit application
         private void simpleMasterPage_FormClosed(object sender, FormClosedEventArgs e)
@@ -147,19 +163,6 @@ namespace General.MasterPages
             foreach (Control child in c.Controls)
                 ApplyNewText(child, child.Name, resources, cultureInfo);
         }
-
-        //private void FinishButton_Click(object sender, EventArgs e)
-        //{
-        //    if (FormComplete())
-        //    {
-        //        this.formc
-        //    }
-        //}
-
-        //protected virtual bool FormComplete()
-        //{
-
-        //} 
     }
     
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using UI;
+using System.Runtime.InteropServices;
 
 namespace General.Coalitions
 {
@@ -39,6 +40,7 @@ namespace General.Coalitions
             label1.Text = "Генерирование биматричных игр (1/" +
                 (Database.G.N * (Database.G.N - 1) / 2).ToString() + ")";
 
+            //Grid settings
             UI.TWDNGrid G = new UI.TWDNGrid(D, Database.G.N, Database.G.N);
             G.InitializeHeaders("Выигрыши", "Игрок", "Игрок");
             G.InitializeGrid();
@@ -171,7 +173,7 @@ namespace General.Coalitions
                 else
                     l.Text = "v(" + (i + 1) + ") = ";
                 l.Font = F;
-                l.ForeColor = label1.ForeColor;
+                l.ForeColor = this.ForeColor;
                 l.Size = TextRenderer.MeasureText(l.Text, l.Font);
 
 
@@ -275,7 +277,6 @@ namespace General.Coalitions
 
         #endregion
 
-
         #region Buttons Interaction
 
         /// <summary>
@@ -296,7 +297,9 @@ namespace General.Coalitions
         /// <param name="e"></param>
         private void SkipButton_Click(object sender, EventArgs e)
         {
-
+            TestForm F = new TestForm();
+            F.Show();
+            this.Close();
         }
 
         public bool CheckIncooperativeGame()
@@ -324,7 +327,7 @@ namespace General.Coalitions
 
                 if ((value > 1.1 * ActualValue) || (value < 0.9 * ActualValue))
                 {
-                    CGStudentProgress.GenerateError("Ошибка при подсчете выражения для " + (i + 1) + " игрока.");
+                    CGStudentProgress.GenerateError("Ошибка при подсчете выражения для " + (i + 1) + " игрока.",errorCounter);
                     return false;
                 }
             }

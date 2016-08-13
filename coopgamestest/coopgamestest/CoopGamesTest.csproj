@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coalitions\CooperativeGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coalitions\CooperativeGameForm.Designer.cs">
+      <DependentUpon>CooperativeGameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Coalitions\IncooperativeGameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,12 @@
     <Compile Include="Coalitions\OptimalCoalitionForm.Designer.cs">
       <DependentUpon>OptimalCoalitionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Coalitions\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coalitions\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Coalitions\ViewCooperativeGameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,12 +77,6 @@
       <DependentUpon>ViewCooperativeGameForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\GameTheory.cs" />
-    <Compile Include="Coalitions\CoalitionChooseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Coalitions\CoalitionChooseForm.Designer.cs">
-      <DependentUpon>CoalitionChooseForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Coalitions\ViewSingleGameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     </Compile>
     <Compile Include="MasterPages\simpleMasterPage.Designer.cs">
       <DependentUpon>simpleMasterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\tabsMasterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterPages\tabsMasterPage.Designer.cs">
+      <DependentUpon>tabsMasterPage.cs</DependentUpon>
     </Compile>
     <Compile Include="NumericTextBox.cs">
       <SubType>UserControl</SubType>
@@ -111,8 +123,8 @@
     <Compile Include="Shapley\ShapleyTask.Designer.cs">
       <DependentUpon>ShapleyTask.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Coalitions\CoalitionChooseForm.resx">
-      <DependentUpon>CoalitionChooseForm.cs</DependentUpon>
+    <EmbeddedResource Include="Coalitions\CooperativeGameForm.resx">
+      <DependentUpon>CooperativeGameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coalitions\IncooperativeGameForm.en-US.resx">
       <DependentUpon>IncooperativeGameForm.cs</DependentUpon>
@@ -125,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Coalitions\OptimalCoalitionForm.resx">
       <DependentUpon>OptimalCoalitionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coalitions\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coalitions\TestForm.ru.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coalitions\ViewCooperativeGameForm.resx">
       <DependentUpon>ViewCooperativeGameForm.cs</DependentUpon>
@@ -141,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MasterPages\simpleMasterPage.ru.resx">
       <DependentUpon>simpleMasterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPages\tabsMasterPage.resx">
+      <DependentUpon>tabsMasterPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NumericTextBox.resx">
       <DependentUpon>NumericTextBox.cs</DependentUpon>

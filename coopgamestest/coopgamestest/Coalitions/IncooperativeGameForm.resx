@@ -124,6 +124,9 @@
   <data name="navigationPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>700, 75</value>
   </data>
+  <data name="navigationPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 373</value>
+  </data>
   <data name="&gt;&gt;headerPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -133,14 +136,17 @@
   <data name="&gt;&gt;FinishButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;headerLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;errorCounter.Parent" xml:space="preserve">
+    <value>errorCounterPanel</value>
   </data>
   <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>390, 23</value>
   </data>
   <data name="&gt;&gt;taskLabel.Parent" xml:space="preserve">
     <value>taskContentPanel</value>
+  </data>
+  <data name="&gt;&gt;taskLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -189,7 +195,7 @@
     <value>True</value>
   </data>
   <data name="&gt;&gt;taskContentPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>GenerationPanel</value>
@@ -260,14 +266,11 @@
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>325, 20</value>
   </data>
-  <data name="&gt;&gt;SkipButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="&gt;&gt;headerPanel.Name" xml:space="preserve">
     <value>headerPanel</value>
   </data>
-  <data name="label3.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;errorCounter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="testPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 454</value>
@@ -277,6 +280,9 @@
   </data>
   <data name="&gt;&gt;progressBar1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorCounter.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;testPanel.Name" xml:space="preserve">
     <value>testPanel</value>
@@ -289,6 +295,9 @@
   </data>
   <data name="&gt;&gt;SkipButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorCounter.Name" xml:space="preserve">
+    <value>errorCounter</value>
   </data>
   <data name="&gt;&gt;headerLabel.Name" xml:space="preserve">
     <value>headerLabel</value>
@@ -305,8 +314,8 @@
   <data name="&gt;&gt;taskLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="navigationPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 373</value>
+  <data name="label3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;headerLabel.Parent" xml:space="preserve">
     <value>headerPanel</value>
@@ -332,8 +341,8 @@
   <data name="&gt;&gt;progressBar1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;taskLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;headerLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;taskContentPanel.Parent" xml:space="preserve">
     <value>headerPanel</value>
@@ -358,6 +367,9 @@
   </data>
   <data name="D.Size" type="System.Drawing.Size, System.Drawing">
     <value>370, 74</value>
+  </data>
+  <data name="&gt;&gt;taskContentPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
     <value>159, 35</value>
@@ -395,8 +407,8 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>General.MasterPages.simpleMasterPage, CoopGamesTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;taskContentPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;SkipButton.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;contentPanel.Parent" xml:space="preserve">
     <value>$this</value>

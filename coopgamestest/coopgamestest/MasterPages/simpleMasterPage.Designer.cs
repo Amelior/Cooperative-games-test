@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(simpleMasterPage));
             this.headerLabel = new System.Windows.Forms.Label();
             this.headerPanel = new System.Windows.Forms.Panel();
+            this.errorCounterPanel = new System.Windows.Forms.Panel();
+            this.errorCounter = new System.Windows.Forms.Label();
             this.taskContentPanel = new System.Windows.Forms.Panel();
             this.taskLabel = new System.Windows.Forms.Label();
             this.contentPanel = new System.Windows.Forms.Panel();
@@ -43,6 +45,7 @@
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.русскийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.headerPanel.SuspendLayout();
+            this.errorCounterPanel.SuspendLayout();
             this.taskContentPanel.SuspendLayout();
             this.navigationPanel.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -52,17 +55,34 @@
             // 
             resources.ApplyResources(this.headerLabel, "headerLabel");
             this.headerLabel.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel.ForeColor = System.Drawing.Color.Black;
             this.headerLabel.Name = "headerLabel";
             // 
             // headerPanel
             // 
+            this.headerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(179)))), ((int)(((byte)(120)))));
+            this.headerPanel.Controls.Add(this.errorCounterPanel);
             this.headerPanel.Controls.Add(this.taskContentPanel);
             this.headerPanel.Controls.Add(this.headerLabel);
             resources.ApplyResources(this.headerPanel, "headerPanel");
             this.headerPanel.Name = "headerPanel";
             // 
+            // errorCounterPanel
+            // 
+            this.errorCounterPanel.BackColor = System.Drawing.Color.Transparent;
+            this.errorCounterPanel.Controls.Add(this.errorCounter);
+            resources.ApplyResources(this.errorCounterPanel, "errorCounterPanel");
+            this.errorCounterPanel.Name = "errorCounterPanel";
+            // 
+            // errorCounter
+            // 
+            resources.ApplyResources(this.errorCounter, "errorCounter");
+            this.errorCounter.ForeColor = System.Drawing.Color.Black;
+            this.errorCounter.Name = "errorCounter";
+            // 
             // taskContentPanel
             // 
+            this.taskContentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(157)))), ((int)(((byte)(188)))));
             this.taskContentPanel.Controls.Add(this.taskLabel);
             resources.ApplyResources(this.taskContentPanel, "taskContentPanel");
             this.taskContentPanel.Name = "taskContentPanel";
@@ -70,16 +90,19 @@
             // taskLabel
             // 
             resources.ApplyResources(this.taskLabel, "taskLabel");
+            this.taskLabel.ForeColor = System.Drawing.Color.Black;
             this.taskLabel.Name = "taskLabel";
             // 
             // contentPanel
             // 
+            this.contentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(179)))), ((int)(((byte)(120)))));
             resources.ApplyResources(this.contentPanel, "contentPanel");
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.TabStop = true;
             // 
             // navigationPanel
             // 
+            this.navigationPanel.BackColor = System.Drawing.Color.Transparent;
             this.navigationPanel.Controls.Add(this.FinishButton);
             this.navigationPanel.Controls.Add(this.SkipButton);
             resources.ApplyResources(this.navigationPanel, "navigationPanel");
@@ -87,7 +110,7 @@
             // 
             // FinishButton
             // 
-            this.FinishButton.BackColor = System.Drawing.Color.DimGray;
+            this.FinishButton.BackColor = System.Drawing.Color.Maroon;
             this.FinishButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.FinishButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.FinishButton, "FinishButton");
@@ -97,7 +120,7 @@
             // 
             // SkipButton
             // 
-            this.SkipButton.BackColor = System.Drawing.Color.DimGray;
+            this.SkipButton.BackColor = System.Drawing.Color.Maroon;
             this.SkipButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SkipButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.SkipButton, "SkipButton");
@@ -107,7 +130,7 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.BackColor = System.Drawing.Color.DimGray;
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(179)))), ((int)(((byte)(120)))));
             resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.languageLabel,
@@ -116,9 +139,9 @@
             // 
             // languageLabel
             // 
-            this.languageLabel.ForeColor = System.Drawing.Color.White;
-            this.languageLabel.Name = "languageLabel";
             resources.ApplyResources(this.languageLabel, "languageLabel");
+            this.languageLabel.ForeColor = System.Drawing.Color.Black;
+            this.languageLabel.Name = "languageLabel";
             // 
             // languageComboBox
             // 
@@ -127,7 +150,7 @@
             this.languageComboBox.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.englishToolStripMenuItem,
             this.русскийToolStripMenuItem});
-            this.languageComboBox.ForeColor = System.Drawing.Color.Silver;
+            this.languageComboBox.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.languageComboBox, "languageComboBox");
             this.languageComboBox.Name = "languageComboBox";
             this.languageComboBox.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.languageComboBox_DropDownItemClicked);
@@ -148,16 +171,18 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Maroon;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(88)))), ((int)(((byte)(114)))));
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.navigationPanel);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.headerPanel);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "simpleMasterPage";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.simpleMasterPage_FormClosed);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
+            this.errorCounterPanel.ResumeLayout(false);
+            this.errorCounterPanel.PerformLayout();
             this.taskContentPanel.ResumeLayout(false);
             this.taskContentPanel.PerformLayout();
             this.navigationPanel.ResumeLayout(false);
@@ -171,7 +196,6 @@
         #endregion
         public System.Windows.Forms.Panel navigationPanel;
         protected System.Windows.Forms.Label headerLabel;
-        protected System.Windows.Forms.Label taskLabel;
         protected System.Windows.Forms.Button SkipButton;
         protected System.Windows.Forms.Button FinishButton;
         private System.Windows.Forms.ToolStripStatusLabel languageLabel;
@@ -182,5 +206,8 @@
         public System.Windows.Forms.Panel taskContentPanel;
         public System.Windows.Forms.ToolStripDropDownButton languageComboBox;
         public System.Windows.Forms.StatusStrip statusStrip1;
+        public System.Windows.Forms.Label errorCounter;
+        protected System.Windows.Forms.Panel errorCounterPanel;
+        public System.Windows.Forms.Label taskLabel;
     }
 }

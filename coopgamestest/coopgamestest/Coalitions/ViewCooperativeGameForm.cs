@@ -12,7 +12,7 @@ namespace General.Coalitions
 {
     public partial class ViewCooperativeGameForm : Form
     {
-        CoalitionChooseForm parent;
+        TestForm parent;
         BimatrixGame G;
 
         UI.StrategiesGrid Ga, Gb;
@@ -21,7 +21,7 @@ namespace General.Coalitions
         List<TextBox> PayoffDistributionTB = new List<TextBox>();
         string Coalition;
 
-        public ViewCooperativeGameForm(CoalitionChooseForm parent, string Coalition)
+        public ViewCooperativeGameForm(TestForm parent, string Coalition)
         {
             InitializeComponent();
             G = Database.G.FindGame(Coalition);
@@ -295,7 +295,7 @@ namespace General.Coalitions
                         Matches[i] = true;
                     else
                     {
-                        CGStudentProgress.GenerateError("Повторное заполнение одинаковой коалиции.");
+                        CGStudentProgress.GenerateError("Повторное заполнение одинаковой коалиции.",null);
                         return false;
                     }
                     break;
@@ -575,7 +575,7 @@ namespace General.Coalitions
                 return false;
             if ((value > 1.1 * ActualValue) || (value < 0.9 * ActualValue))
             {
-                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока");
+                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока",null);
                 return false;
             }
 
@@ -586,7 +586,7 @@ namespace General.Coalitions
                 return false;
             if ((value > 1.1 * ActualValue) || (value < 0.9 * ActualValue))
             {
-                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока");
+                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока", null);
                 return false;
             }
 
@@ -597,7 +597,7 @@ namespace General.Coalitions
                 return false;
             if ((value > 1.1 * ActualValue) || (value < 0.9 * ActualValue))
             {
-                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока");
+                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока", null);
                 return false;
             }
 
@@ -607,7 +607,7 @@ namespace General.Coalitions
                 return false;
             if ((value > 1.1 * ActualValue) || (value < 0.9 * ActualValue))
             {
-                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока");
+                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока", null);
                 return false;
             }
 
@@ -619,7 +619,7 @@ namespace General.Coalitions
                 return false;
             if ((value > 1.1 * ActualValue) || (value < 0.9 * ActualValue))
             {
-                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока");
+                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока", null);
                 return false;
             }
 
@@ -630,7 +630,7 @@ namespace General.Coalitions
                 return false;
             if ((value > 1.1 * ActualValue) || (value < 0.9 * ActualValue))
             {
-                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока");
+                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока", null);
                 return false;
             }
 
@@ -641,7 +641,7 @@ namespace General.Coalitions
                 return false;
             if ((value > 1.1 * ActualValue) || (value < 0.9 * ActualValue))
             {
-                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока");
+                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока", null);
                 return false;
             }
 
@@ -651,7 +651,7 @@ namespace General.Coalitions
                 return false;
             if ((value > 1.1 * ActualValue) || (value < 0.9 * ActualValue))
             {
-                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока");
+                CGStudentProgress.GenerateError("Ошибка в формуле выигрыша первого игрока", null);
                 return false;
             }
 
@@ -672,7 +672,7 @@ namespace General.Coalitions
             if (((Database.G.outcome > G.SingleGames[0].Ha + G.SingleGames[0].Hb) && (Sufficient)) ||
                 ((Database.G.outcome < G.SingleGames[0].Ha + G.SingleGames[0].Hb) && (!Sufficient)))
             {
-                CGStudentProgress.GenerateError("Ошибка при определении существенности");
+                CGStudentProgress.GenerateError("Ошибка при определении существенности", null);
                 return false;
             }
 
@@ -704,7 +704,7 @@ namespace General.Coalitions
 
                 if ((value > 1.1 * ActualValue) || (value < 0.9 * ActualValue))
                 {
-                    CGStudentProgress.GenerateError("Ошибка при подсчете выражения для " + (i + 1) + " игрока.");
+                    CGStudentProgress.GenerateError("Ошибка при подсчете выражения для " + (i + 1) + " игрока.", null);
                     return false;
                 }
                 if (ActualValue < Database.G.payoffs[i])
@@ -714,7 +714,7 @@ namespace General.Coalitions
 
             if (((DivisionRational) && (!Rational)) || ((!DivisionRational) && (Rational)))
             {
-                CGStudentProgress.GenerateError("Ошибка при определении рациональности дележа");
+                CGStudentProgress.GenerateError("Ошибка при определении рациональности дележа", null);
                 return false;
             }
 
@@ -736,7 +736,7 @@ namespace General.Coalitions
                             SkipBTN_Click(this, new EventArgs());
                         else
                             CGStudentProgress.GenerateError("Должны получиться матрицы размерностью " +
-                                D.A.Count + "x" + D.A[0].Count);
+                                D.A.Count + "x" + D.A[0].Count, null);
                     }
                     break;
                 case 4:
