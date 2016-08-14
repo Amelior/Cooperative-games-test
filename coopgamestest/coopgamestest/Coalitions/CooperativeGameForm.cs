@@ -92,6 +92,7 @@ namespace General.Coalitions
             blocks.Last().AddElement(payoffsPanel);
             blocks.Last().VerticalInterval *= 2;
             return blocks.Last();
+
         }
 
         private bool CheckStudentsStrategies()
