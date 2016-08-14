@@ -106,13 +106,13 @@ namespace General.Coalitions
             }
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
-                //ViewCooperativeGameForm F = new ViewCooperativeGameForm(this, (sender as Button).Text);
-                //MultiFormProcessor.FormOpened();
-                //F.StartPosition = FormStartPosition.CenterScreen;
-                //if (CGStudentProgress.CurrentSection > 2)
-                //    F.Show();
-                //else
-                //    F.ShowDialog();
+                CooperativeGameForm F = new CooperativeGameForm(this, (sender as Button).Text);
+                MultiFormProcessor.FormOpened();
+                F.StartPosition = FormStartPosition.CenterScreen;
+                if (CGStudentProgress.CurrentSection > 2)
+                    F.Show();
+                else
+                    F.ShowDialog();
             }
         }
 

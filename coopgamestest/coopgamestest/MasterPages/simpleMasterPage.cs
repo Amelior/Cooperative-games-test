@@ -103,6 +103,10 @@ namespace General.MasterPages
         {
             blocks.Add(new ControlsAligner(errorCounterPanel));
             blocks.Last().AddElement(errorCounter);
+            blocks.Last().Left = 0;
+            blocks.Last().Right = 0;
+            blocks.Last().Top = 0;
+            blocks.Last().Bottom = 0;
         }
 
 

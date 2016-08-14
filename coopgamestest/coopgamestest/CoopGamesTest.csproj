@@ -97,12 +97,6 @@
     <Compile Include="MasterPages\simpleMasterPage.Designer.cs">
       <DependentUpon>simpleMasterPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MasterPages\tabsMasterPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MasterPages\tabsMasterPage.Designer.cs">
-      <DependentUpon>tabsMasterPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="NumericTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -159,9 +153,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MasterPages\simpleMasterPage.ru.resx">
       <DependentUpon>simpleMasterPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MasterPages\tabsMasterPage.resx">
-      <DependentUpon>tabsMasterPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NumericTextBox.resx">
       <DependentUpon>NumericTextBox.cs</DependentUpon>

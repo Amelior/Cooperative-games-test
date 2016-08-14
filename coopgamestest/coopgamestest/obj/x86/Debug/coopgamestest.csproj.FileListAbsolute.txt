@@ -46,4 +46,3 @@ D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\Gen
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.TestForm.resources
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.TestForm.ru.resources
 D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.Coalitions.CooperativeGameForm.resources
-D:\Projects\Cooperative-games-test\coopgamestest\coopgamestest\obj\x86\Debug\General.MasterPages.tabsMasterPage.resources

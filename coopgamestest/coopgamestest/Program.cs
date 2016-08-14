@@ -17,8 +17,8 @@ namespace General
             Application.SetCompatibleTextRenderingDefault(false);
 
             //TestSelectionForm F = new TestSelectionForm();
-            //Coalitions.IncooperativeGameForm F = new Coalitions.IncooperativeGameForm();
-            MasterPages.tabsMasterPage F = new MasterPages.tabsMasterPage();
+            Coalitions.IncooperativeGameForm F = new Coalitions.IncooperativeGameForm();
+            
             //Coalitions.TestForm F = new Coalitions.TestForm();
             //Shapley.ShapleyTask F = new Shapley.ShapleyTask();
             //StudentInitializationForm F = new StudentInitializationForm();
