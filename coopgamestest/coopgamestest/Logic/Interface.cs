@@ -58,6 +58,26 @@ namespace UI
             position.Last().Add(AlignmentMode);
         }
 
+        public bool RemoveElement(string controlName)
+        {
+            for (int i = 0; i<controls.Count; i++)
+                for (int j = 0; j<controls[i].Count; j++)
+                {
+                    if (controls[i][j].Name == controlName)
+                    {
+                        controls[i].RemoveAt(j);
+                        position[i].RemoveAt(j);
+                        if (controls[i].Count == 0)
+                            controls.RemoveAt(i);
+                        if (position[i].Count == 0)
+                            position.RemoveAt(i);
+
+                        return true;
+                    }
+                }
+            return false;
+        }
+
         public void Align(bool ZeroPadding = false)
         {
             if (controls.Count > 0)
@@ -107,8 +127,17 @@ namespace UI
                         if (position[i][j] != "HorBind")
                             controls[i][j].Left += HorizontalInterval;
                         else
+                        {
                             controls[i][j].Top = controls[i][j - 1].Top +
                                 (controls[i][j - 1].Height - controls[i][j].Height) / 2;
+                            if (controls[i][j].Top < 0)
+                            {
+                                int diff = controls[i][j - 1].Top - controls[i][j].Top;
+                                controls[i][j - 1].Top += diff;
+                                controls[i][j].Top += diff;
+                            }
+
+                        }
                     }
 
                     if ((!WidthFixed) && (position[i][j] != "Stretch"))
@@ -390,7 +419,7 @@ namespace UI
         private int DefaultRowsWidth = 0;
         private int DefaultColumnsWidth = 0;
         public int RowHeaderAlignSize = 0;
-        public readonly Size MaximumSize = new Size(500, 500);
+        public readonly Size MaximumSize = new Size(500, 300);
         public bool LimitedSize = false;
         //HeaderColors
         private Color ColumnHeaderBackColor = Color.White;

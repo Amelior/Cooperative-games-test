@@ -297,6 +297,7 @@ namespace General.Coalitions
         /// <param name="e"></param>
         private void SkipButton_Click(object sender, EventArgs e)
         {
+            CGStudentProgress.NewSection();
             TestForm F = new TestForm();
             F.Show();
             this.Close();
